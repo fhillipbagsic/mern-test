@@ -10,7 +10,7 @@ function App() {
   const [port, setPort] = useState(process.env.PORT);
   useEffect(() => {
     axios
-      .post(`http://localhost:${port}/api/login`, {
+      .post(`/api/login`, {
         username: "abc",
         password: "123",
       })
