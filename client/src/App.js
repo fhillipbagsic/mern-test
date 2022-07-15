@@ -18,7 +18,7 @@ function App() {
         setUsername(res.data.username);
         setPassword(res.data.password);
       });
-    console.log(process.env.PORT);
+    console.log('PORT' + process.env.PORT);
   }, []);
 
   return (
