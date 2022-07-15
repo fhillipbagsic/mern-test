@@ -7,7 +7,7 @@ console.log('asc')
 function App() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [port, setPort] = useState(5001);
+  const [port, setPort] = useState(process.env.PORT);
   useEffect(() => {
     axios
       .post(`http://localhost:${port}/api/login`, {
@@ -26,6 +26,7 @@ function App() {
       <h1>Logins</h1>
       <p>{username}</p>
       <p>{password}</p>
+      <p>PORT :{port}</p>
     </div>
   );
 }
